@@ -1,1 +1,1 @@
-# ignore large data files
+# ignore large data files (greater than 100 MB)
