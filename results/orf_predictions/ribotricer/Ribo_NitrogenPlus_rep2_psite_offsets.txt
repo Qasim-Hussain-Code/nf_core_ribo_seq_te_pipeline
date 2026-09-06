@@ -1,0 +1,12 @@
+relative lag to base: 38
+	lag of 32: 0
+	lag of 31: -1
+	lag of 26: 0
+	lag of 25: 0
+	lag of 23: 0
+	lag of 28: -1
+	lag of 29: 0
+	lag of 37: 0
+	lag of 35: 0
+	lag of 34: 0
+	lag of 38: 0

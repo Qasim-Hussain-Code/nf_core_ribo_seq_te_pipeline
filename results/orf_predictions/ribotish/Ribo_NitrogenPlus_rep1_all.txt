@@ -1,0 +1,1 @@
+Gid	Tid	Symbol	GeneType	GenomePos	StartCodon	Start	Stop	TisType	TISGroup	TISCounts	TISPvalue	RiboPvalue	RiboPStatus	FisherPvalue	TISQvalue	FrameQvalue	FisherQvalue	AALen

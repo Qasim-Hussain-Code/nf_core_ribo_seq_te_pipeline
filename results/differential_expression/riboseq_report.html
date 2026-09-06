@@ -1,0 +1,275 @@
+<!doctype html><meta charset="utf-8"><title>Ribo-seq report</title>
+<style>
+     body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+          max-width:1100px;margin:2rem auto;padding:0 1.5rem;line-height:1.6;color:#1a1a1a}
+     h1{border-bottom:3px solid #2c5aa0;padding-bottom:.3rem}
+     h2{margin-top:2.5rem;border-bottom:1px solid #ddd;padding-bottom:.2rem}
+     table{border-collapse:collapse;width:100%;margin:1rem 0;font-size:.9rem}
+     th{background:#2c5aa0;color:#fff;text-align:left;padding:.5rem}
+     td{border-bottom:1px solid #eee;padding:.4rem .5rem}
+     tr:nth-child(even){background:#fafafa}
+     .miss{background:#fff4e5;border-left:4px solid #e08600;padding:.8rem 1rem;margin:1rem 0}
+     .ok{background:#eaf6ea;border-left:4px solid #2e7d32;padding:.8rem 1rem;margin:1rem 0}
+     code{background:#f4f4f4;padding:.1rem .3rem;border-radius:3px}
+     details{margin:.5rem 0;background:#fafafa;border:1px solid #e0e0e0;border-radius:4px;padding:.5rem .8rem}
+     summary{cursor:pointer;font-weight:600}
+     .num{text-align:right;font-variant-numeric:tabular-nums}
+     .foot{margin-top:3rem;padding-top:1rem;border-top:1px solid #ddd;
+           font-size:.87rem;color:#555;text-align:center;line-height:1.9}
+     .foot a{color:#0f5257;text-decoration:none} .foot a:hover{text-decoration:underline}
+     .foot .nm{font-weight:600;color:#0f5257;font-size:.95rem}
+     </style>
+<h1>Ribo-seq analysis report</h1><p><em>generated 2026-09-06 12:33</em></p>
+<h2>1. Run configuration</h2>
+<table><tr>
+<th>setting</th><th>value</th>
+</tr>
+<tr>
+<td>THREADS</td><td>16</td>
+</tr>
+<tr>
+<td>RAM_GB</td><td>7</td>
+</tr>
+<tr>
+<td>MAX_MEM_GB</td><td>5          # ceiling handed to Nextflow (RAM minus headroom)</td>
+</tr>
+<tr>
+<td>HIGH_CPUS</td><td>10</td>
+</tr>
+<tr>
+<td>HIGH_MEM_GB</td><td>4</td>
+</tr>
+<tr>
+<td>GENOME_ACC</td><td>GCF_000007065.1</td>
+</tr>
+<tr>
+<td>GTF_PAD</td><td>50                     # synthetic UTR padding, nt</td>
+</tr>
+<tr>
+<td>PIPELINE</td><td>nf-core/riboseq</td>
+</tr>
+<tr>
+<td>PIPELINE_REV</td><td>1.2.0</td>
+</tr>
+</table>
+<h2>2. Samples</h2>
+<table><tr>
+<th>sample</th><th>type</th><th>condition</th><th>replicate</th><th>pair</th><th>srr</th>
+</tr>
+<tr>
+<td>RNA_NitrogenPlus_rep1</td><td>rnaseq</td><td>NitrogenPlus</td><td class="num">1</td><td class="num">1</td><td>SRR25604691</td>
+</tr>
+<tr>
+<td>RNA_NitrogenPlus_rep2</td><td>rnaseq</td><td>NitrogenPlus</td><td class="num">2</td><td class="num">2</td><td>SRR25604690</td>
+</tr>
+<tr>
+<td>Ribo_NitrogenPlus_rep1</td><td>riboseq</td><td>NitrogenPlus</td><td class="num">1</td><td class="num">1</td><td>SRR25604693</td>
+</tr>
+<tr>
+<td>Ribo_NitrogenPlus_rep2</td><td>riboseq</td><td>NitrogenPlus</td><td class="num">2</td><td class="num">2</td><td>SRR25604692</td>
+</tr>
+<tr>
+<td>RNA_NitrogenMinus_rep1</td><td>rnaseq</td><td>NitrogenMinus</td><td class="num">1</td><td class="num">3</td><td>SRR25604695</td>
+</tr>
+<tr>
+<td>RNA_NitrogenMinus_rep2</td><td>rnaseq</td><td>NitrogenMinus</td><td class="num">2</td><td class="num">4</td><td>SRR25604694</td>
+</tr>
+<tr>
+<td>Ribo_NitrogenMinus_rep1</td><td>riboseq</td><td>NitrogenMinus</td><td class="num">1</td><td class="num">3</td><td>SRR25604697</td>
+</tr>
+<tr>
+<td>Ribo_NitrogenMinus_rep2</td><td>riboseq</td><td>NitrogenMinus</td><td class="num">2</td><td class="num">4</td><td>SRR25604696</td>
+</tr>
+</table>
+<p>8 libraries: 4 riboseq, 4 rnaseq</p>
+<h2>3. Expression matrices</h2>
+<div class='ok'>Normalised matrices written. <strong>Use TPM to compare samples</strong> - 
+TPM columns sum to 1e6, RPKM columns do not, so RPKM is not comparable between libraries. 
+RPKM and FPKM are identical for single-end data.</div>
+<ul>
+<li><code>NitrogenMinus_vs_NitrogenPlus.gene_CPM.tsv</code></li><li><code>NitrogenMinus_vs_NitrogenPlus.gene_DESeq2_normalised.tsv</code></li><li><code>NitrogenMinus_vs_NitrogenPlus.gene_FPKM.tsv</code></li><li><code>NitrogenMinus_vs_NitrogenPlus.gene_RPKM.tsv</code></li><li><code>NitrogenMinus_vs_NitrogenPlus.gene_TPM.tsv</code></li><li><code>NitrogenMinus_vs_NitrogenPlus.gene_VST.tsv</code></li><li><code>NitrogenMinus_vs_NitrogenPlus.size_factors.tsv</code></li>
+</ul>
+<h2>4. Differential expression and translational efficiency</h2>
+<p>Master table: <code>NitrogenMinus_vs_NitrogenPlus.MASTER_all_results.tsv</code> - 3478 genes x 39 columns.</p>
+<div class='ok'><strong>Where log2FC comes from.</strong> Every fold change and p-value 
+is computed from <em>raw counts</em> using each tool's own normalisation 
+(DESeq2 median-of-ratios; xtail size factors). RPKM/FPKM/TPM are never used for testing - 
+they are already normalised, which breaks the count-level mean-variance relationship the 
+negative-binomial model needs. They appear as descriptive expression levels only.</div>
+<table><tr>
+<th>method</th><th>significant</th><th>tested</th>
+</tr>
+<tr>
+<td>deseq2</td><td class="num">40</td><td class="num">1387</td>
+</tr>
+<tr>
+<td>xtail</td><td class="num">62</td><td class="num">3433</td>
+</tr>
+<tr>
+<td>riborex</td><td class="num">332</td><td class="num">2626</td>
+</tr>
+</table>
+<p><strong>RNA-seq DE:</strong> 437 of 2391 genes at padj &lt; 0.05</p>
+<p><strong>Ribo-seq DE:</strong> 870 of 3454 genes at padj &lt; 0.05</p>
+<h3>Regulatory modes</h3>
+<p>What each gene's behaviour implies about where control is exerted:</p>
+<table><tr>
+<th>mode</th><th>genes</th>
+</tr>
+<tr>
+<td>Unchanged</td><td class="num">3129</td>
+</tr>
+<tr>
+<td>Transcriptional</td><td class="num">309</td>
+</tr>
+<tr>
+<td>Translational</td><td class="num">17</td>
+</tr>
+<tr>
+<td>Intensified</td><td class="num">16</td>
+</tr>
+<tr>
+<td>TE-only</td><td class="num">5</td>
+</tr>
+<tr>
+<td>Buffered</td><td class="num">2</td>
+</tr>
+</table>
+<details><summary>How these are defined</summary><ul>
+<li><strong>Transcriptional</strong> - RNA and Ribo both move, TE unchanged: output follows transcription.</li>
+<li><strong>Translational</strong> - Ribo moves, RNA does not: translation acts alone.</li>
+<li><strong>Buffered</strong> - RNA moves, Ribo does not: translation absorbs the mRNA change.</li>
+<li><strong>Intensified</strong> - both move the same way and TE amplifies it.</li>
+<li><strong>TE-only</strong> - TE moved but neither assay reached significance alone; weaker evidence.</li>
+</ul></details>
+<h3>Top genes by method agreement</h3>
+<p>Sorted by how many TE methods call the gene significant - the practical 
+confidence score when methods disagree at low replication.</p>
+<table><tr>
+<th>gene_id</th><th>n_TE_methods_sig</th><th>mode</th><th>log2FC_RNA</th><th>log2FC_Ribo</th><th>log2FC_TE_deseq2</th><th>log2FC_TE_xtail</th><th>log2FC_TE_riborex</th>
+</tr>
+<tr>
+<td>MM_RS11035</td><td class="num">3</td><td>Translational</td><td class="num">-1.218</td><td class="num">-4.329</td><td class="num">-3.079</td><td class="num">-3.117</td><td class="num">-4.301</td>
+</tr>
+<tr>
+<td>MM_RS04225</td><td class="num">3</td><td>Translational</td><td class="num">-0.2233</td><td class="num">-2.846</td><td class="num">-2.601</td><td class="num">-2.631</td><td class="num">-2.814</td>
+</tr>
+<tr>
+<td>MM_RS11030</td><td class="num">3</td><td>Intensified</td><td class="num">-1.806</td><td class="num">-4.429</td><td class="num">-2.666</td><td class="num">-2.628</td><td class="num">-4.395</td>
+</tr>
+<tr>
+<td>MM_RS11005</td><td class="num">3</td><td>Intensified</td><td class="num">-1.776</td><td class="num">-4.188</td><td class="num">-2.353</td><td class="num">-2.417</td><td class="num">-4.155</td>
+</tr>
+<tr>
+<td>MM_RS11045</td><td class="num">3</td><td>Translational</td><td class="num">-0.8172</td><td class="num">-3.574</td><td class="num">-2.792</td><td class="num">-2.749</td><td class="num">-3.542</td>
+</tr>
+<tr>
+<td>MM_RS07150</td><td class="num">3</td><td>Translational</td><td class="num">-0.188</td><td class="num">-2.291</td><td class="num">-2.154</td><td class="num">-2.109</td><td class="num">-2.255</td>
+</tr>
+<tr>
+<td>MM_RS11110</td><td class="num">3</td><td>Intensified</td><td class="num">-2.31</td><td class="num">-4.37</td><td class="num">-2.064</td><td class="num">-2.068</td><td class="num">-4.336</td>
+</tr>
+<tr>
+<td>MM_RS11050</td><td class="num">3</td><td>Translational</td><td class="num">-1.077</td><td class="num">-3.614</td><td class="num">-2.645</td><td class="num">-2.535</td><td class="num">-3.577</td>
+</tr>
+<tr>
+<td>MM_RS04800</td><td class="num">3</td><td>Translational</td><td class="num">-0.1487</td><td class="num">-2.269</td><td class="num">-2.091</td><td class="num">-2.125</td><td class="num">-2.235</td>
+</tr>
+<tr>
+<td>MM_RS11760</td><td class="num">3</td><td>Intensified</td><td class="num">-2.571</td><td class="num">-4.942</td><td class="num">-2.412</td><td class="num">-2.378</td><td class="num">-4.909</td>
+</tr>
+<tr>
+<td>MM_RS16525</td><td class="num">3</td><td>Intensified</td><td class="num">2.862</td><td class="num">4.744</td><td class="num">1.861</td><td class="num">1.876</td><td class="num">4.778</td>
+</tr>
+<tr>
+<td>MM_RS11090</td><td class="num">3</td><td>Intensified</td><td class="num">-1.957</td><td class="num">-4.024</td><td class="num">-2.049</td><td class="num">-2.072</td><td class="num">-3.991</td>
+</tr>
+<tr>
+<td>MM_RS11060</td><td class="num">3</td><td>Translational</td><td class="num">-1.287</td><td class="num">-3.767</td><td class="num">-2.539</td><td class="num">-2.486</td><td class="num">-3.733</td>
+</tr>
+<tr>
+<td>MM_RS19145</td><td class="num">3</td><td>Translational</td><td class="num">-0.4664</td><td class="num">1.555</td><td class="num">2.001</td><td class="num">2.019</td><td class="num">1.592</td>
+</tr>
+<tr>
+<td>MM_RS05045</td><td class="num">3</td><td>Translational</td><td class="num">-0.7687</td><td class="num">-2.811</td><td class="num">-2.105</td><td class="num">-2.048</td><td class="num">-2.776</td>
+</tr>
+<tr>
+<td>MM_RS11085</td><td class="num">3</td><td>Intensified</td><td class="num">-2.039</td><td class="num">-4.036</td><td class="num">-1.99</td><td class="num">-2.001</td><td class="num">-4.001</td>
+</tr>
+<tr>
+<td>MM_RS11070</td><td class="num">3</td><td>Intensified</td><td class="num">-2.117</td><td class="num">-4.54</td><td class="num">-2.353</td><td class="num">-2.424</td><td class="num">-4.503</td>
+</tr>
+<tr>
+<td>MM_RS11105</td><td class="num">3</td><td>Intensified</td><td class="num">-2.268</td><td class="num">-4.204</td><td class="num">-1.982</td><td class="num">-1.938</td><td class="num">-4.17</td>
+</tr>
+<tr>
+<td>MM_RS11015</td><td class="num">3</td><td>Intensified</td><td class="num">-1.949</td><td class="num">-4.39</td><td class="num">-2.287</td><td class="num">-2.449</td><td class="num">-4.358</td>
+</tr>
+<tr>
+<td>MM_RS11740</td><td class="num">3</td><td>Translational</td><td class="num">-1.093</td><td class="num">-2.979</td><td class="num">-1.851</td><td class="num">-1.895</td><td class="num">-2.947</td>
+</tr>
+<tr>
+<td>MM_RS11055</td><td class="num">3</td><td>Translational</td><td class="num">-1.605</td><td class="num">-3.916</td><td class="num">-2.288</td><td class="num">-2.313</td><td class="num">-3.882</td>
+</tr>
+<tr>
+<td>MM_RS11020</td><td class="num">3</td><td>Intensified</td><td class="num">-2.098</td><td class="num">-4.134</td><td class="num">-1.944</td><td class="num">-2.042</td><td class="num">-4.099</td>
+</tr>
+<tr>
+<td>MM_RS05330</td><td class="num">3</td><td>Intensified</td><td class="num">3.644</td><td class="num">1.566</td><td class="num">-1.995</td><td class="num">-2.085</td><td class="num">1.602</td>
+</tr>
+<tr>
+<td>MM_RS07170</td><td class="num">3</td><td>Translational</td><td class="num">0.1268</td><td class="num">-1.897</td><td class="num">-2.003</td><td class="num">-2.027</td><td class="num">-1.863</td>
+</tr>
+<tr>
+<td>MM_RS11765</td><td class="num">3</td><td>Intensified</td><td class="num">-3.609</td><td class="num">-5.375</td><td class="num">-1.725</td><td class="num">-1.778</td><td class="num">-5.341</td>
+</tr>
+</table>
+<h2>5. Figures</h2>
+<ul>
+<li><code>deseq2/NitrogenMinus_vs_NitrogenPlus.deseq2_TE_plots.pdf</code></li><li><code>expression/NitrogenMinus_vs_NitrogenPlus.expression_qc.pdf</code></li><li><code>master/NitrogenMinus_vs_NitrogenPlus.DE_plots.pdf</code></li><li><code>riborex/NitrogenMinus_vs_NitrogenPlus.riborex_TE_plots.pdf</code></li><li><code>xtail/NitrogenMinus_vs_NitrogenPlus.xtail_TE_plots.pdf</code></li>
+</ul>
+<h2>6. Provenance</h2><details><summary>Session info</summary><pre>
+R version 4.3.3 (2024-02-29)
+Platform: x86_64-conda-linux-gnu (64-bit)
+Running under: Ubuntu 26.04 LTS
+
+Matrix products: default
+BLAS/LAPACK: /home/qasim/miniconda3/envs/te_analysis/lib/libopenblasp-r0.3.34.so;  LAPACK version 3.12.0
+
+locale:
+ [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
+ [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   
+ [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          
+[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
+
+time zone: Asia/Taipei
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats4    stats     graphics  grDevices utils     datasets  methods  
+[8] base     
+
+other attached packages:
+ [1] DESeq2_1.42.0               SummarizedExperiment_1.32.0
+ [3] Biobase_2.62.0              MatrixGenerics_1.14.0      
+ [5] matrixStats_1.5.0           GenomicRanges_1.54.1       
+ [7] GenomeInfoDb_1.38.1         IRanges_2.36.0             
+ [9] S4Vectors_0.40.2            BiocGenerics_0.48.1        
+
+loaded via a namespace (and not attached):
+ [1] Matrix_1.6-5            gtable_0.3.6            compiler_4.3.3         
+ [4] crayon_1.5.3            Rcpp_1.1.0              bitops_1.0-9           
+ [7] parallel_4.3.3          scales_1.4.0            BiocParallel_1.36.0    
+[10] lattice_0.22-7          ggplot2_3.5.2           R6_2.6.1               
+[13] XVector_0.42.0          S4Arrays_1.2.0          tibble_3.3.0           
+[16] DelayedArray_0.28.0     GenomeInfoDbData_1.2.11 pillar_1.11.0          
+[19] RColorBrewer_1.1-3      rlang_1.1.6             SparseArray_1.2.2      
+[22] cli_3.6.5               magrittr_2.0.3          zlibbioc_1.48.0        
+[25] locfit_1.5-9.12         grid_4.3.3              lifecycle_1.0.4        
+[28] vctrs_0.6.5             glue_1.8.0              farver_2.1.2           
+[31] codetools_0.2-20        abind_1.4-5             RCurl_1.98-1.16        
+[34] colorspace_2.1-1        pkgconfig_2.0.3         tools_4.3.3            
+</pre></details>
+<div class="foot">
+<span class="nm">Ribo-seq translational efficiency analysis</span>
+</div>
