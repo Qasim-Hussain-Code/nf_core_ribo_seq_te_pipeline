@@ -1,0 +1,9 @@
+sample,fastq_1,fastq_2,strandedness,type,condition,replicate,pair,srr
+RNA_NitrogenPlus_rep1,raw_data/RNA_NitrogenPlus_rep1.fastq.gz,,forward,rnaseq,NitrogenPlus,1,1,SRR25604691
+RNA_NitrogenPlus_rep2,raw_data/RNA_NitrogenPlus_rep2.fastq.gz,,forward,rnaseq,NitrogenPlus,2,2,SRR25604690
+Ribo_NitrogenPlus_rep1,raw_data/Ribo_NitrogenPlus_rep1.fastq.gz,,forward,riboseq,NitrogenPlus,1,1,SRR25604693
+Ribo_NitrogenPlus_rep2,raw_data/Ribo_NitrogenPlus_rep2.fastq.gz,,forward,riboseq,NitrogenPlus,2,2,SRR25604692
+RNA_NitrogenMinus_rep1,raw_data/RNA_NitrogenMinus_rep1.fastq.gz,,forward,rnaseq,NitrogenMinus,1,3,SRR25604695
+RNA_NitrogenMinus_rep2,raw_data/RNA_NitrogenMinus_rep2.fastq.gz,,forward,rnaseq,NitrogenMinus,2,4,SRR25604694
+Ribo_NitrogenMinus_rep1,raw_data/Ribo_NitrogenMinus_rep1.fastq.gz,,forward,riboseq,NitrogenMinus,1,3,SRR25604697
+Ribo_NitrogenMinus_rep2,raw_data/Ribo_NitrogenMinus_rep2.fastq.gz,,forward,riboseq,NitrogenMinus,2,4,SRR25604696
